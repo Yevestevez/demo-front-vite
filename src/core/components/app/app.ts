@@ -1,4 +1,4 @@
-import { Counter } from '../counter/counter';
+import { HomePage } from '../../../home/home';
 import { Footer } from '../footer-wc/footer';
 
 export class App {
@@ -7,8 +7,8 @@ export class App {
         const el = document.querySelector(App.#selector) as HTMLElement;
         const app = new App();
         el.replaceWith(app.#element);
+        HomePage.render();
         Footer.render();
-        Counter.render();
     }
 
     #template!: string;
@@ -23,8 +23,6 @@ export class App {
         this.#template = /*HTML*/ `
             <main>
                 <app-footer></app-footer>
-                <app-counter counterId="01"></app-counter>
-                <app-counter counterId="02"></app-counter>
             </main>
         `;
     }
