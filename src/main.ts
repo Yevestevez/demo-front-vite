@@ -1,6 +1,4 @@
-import { Counter } from './core/components/counter/counter';
-import { Footer } from './core/components/footer-wc/footer';
+import { App } from './core/components/app/app-wc';
 
 console.log('Load main');
-Footer.render();
-Counter.render();
+App.render();
